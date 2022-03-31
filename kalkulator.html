@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="text" id="viewer" disabled>
+    </form>
+    <table>
+        <tr>
+            <td><input type="button" value="1" class="btn1" onclick="view(1)"></td>
+            <td><input type="button" value="2" class="btn1" onclick="view(2)"></td>
+            <td><input type="button" value="3" class="btn1" onclick="view(3)"></td>
+            <td><input type="button" value="+" class="btn2" onclick="view('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" class="btn1" onclick="view(4)"></td>
+            <td><input type="button" value="5" class="btn1" onclick="view(5)"></td>
+            <td><input type="button" value="6" class="btn1" onclick="view(6)"></td>
+            <td><input type="button" value="-" class="btn2" onclick="view('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" class="btn1" onclick="view(7)"></td>
+            <td><input type="button" value="8" class="btn1" onclick="view(8)"></td>
+            <td><input type="button" value="9" class="btn1" onclick="view(9)"></td>
+            <td><input type="button" value=":" class="btn2" onclick="view('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Del" class="btn1" onclick="backspace()"></td>
+            <td><input type="button" value="0" class="btn1" onclick="view(0)"></td>
+            <td><input type="button" value="." class="btn1" onclick="view('.')"></td>
+            <td><input type="button" value="X" class="btn2" onclick="view('*')"></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="button" value="=" class="btn3" onclick="equal()"></td>
+            <td><input type="button" value="C" class="btn4" onclick="clean()"></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="kalkulator.js"></script>
+</body>
