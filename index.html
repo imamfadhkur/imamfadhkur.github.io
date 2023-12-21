@@ -1,785 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Imam Fadhkur Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.1/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous" />
-    <style>
-      #sidebar {
-        z-index: 100;
-      }
-      .outer-slider-web {
-            max-width: 100%; /* Set max-width to 100% of the parent container */
-        }
-
-      /* Adjust vertical alignment for inner-slider container */
-      .inner-slider-web {
-        max-width: 85%;
-        margin: 0 auto;
-      }
-      .outer-slider-mobile {
-            max-width: 100%; /* Set max-width to 100% of the parent container */
-        }
-
-      /* Adjust vertical alignment for inner-slider container */
-      .inner-slider-mobile {
-        max-width: 85%;
-        margin: 0 auto;
-      }
-
-      @media (min-width: 1024px) {
-        .wrapper {
-          max-width: 1068px;
-        }
-      }
-
-      .typing-effect {
-        font-weight: bold; /* Ketebalan teks */
-        position: relative; /* Diperlukan untuk menampilkan kursor */
-      }
-
-      .typing-effect::after {
-        content: "|"; /* Cursor character */
-        animation: typing 0.7s infinite;
-        color: black; /* Color for text and cursor */
-      }
-
-      @keyframes typing {
-        0%, 100% {
-          opacity: 0; /* Cursor invisible at start and end */
-        }
-        50% {
-          opacity: 1; /* Cursor visible in the middle */
-        }
-      }
-
-
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index-style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <title>index</title>
   </head>
-  <body style="background-color: #171718">
-    <div class="wrapper d-flex align-items-stretch">
-      <nav id="sidebar" class="fixed-left">
-        <div class="p-4 pt-2">
-          <button type="button" id="sidebarCollapse1" class="btn btn-outline-primary rounded-circle mb-4 btn-sm">
-            <i class="fa fa-times"></i>
-            <span class="sr-only">Toggle Menu</span>
-          </button>
-          <p class="mb-1 text-left">IMAM FADHKUR ROKHIM</p>
-          <p class="mb-0 text-secondary">Full Stack Web <span class="text-warning">|</span> Mobile App Developer</p>
-          <hr class="border border-warning" />
-          <ul class="list-unstyled components mb-2">
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#experiences_certifications">Experience & Certification</a>
-            </li>
-            <li>
-              <a href="#web_portfolio">Web Portfolio</a>
-            </li>
-            <li>
-              <a href="#mobile_portfolio">Mobile Portfolio</a>
-            </li>
-            <li>
-              <a href="#short_story">Short Story</a>
-            </li>
-            <p class="text-secondary mt-4">links</p>
-            <div class="container-fluid">
-              <div class="row p-0 mb-3">
-                <div class="col p-0">
-                  <a href="https://imamfadhkur.github.io/" class="text-light"><i class="fa fa-link fa-lg" aria-hidden="true"></i> Website</a>
-                </div>
-                <div class="col p-0">
-                  <a target="_blank" href="https://github.com/imamfadhkur" class="text-light"><i class="fa fa-github fa-lg" aria-hidden="true"></i> GitHub</a>
-                </div>
-              </div>
-              <div class="row p-0">
-                <div class="col p-0">
-                  <a target="_blank" href="https://www.linkedin.com/in/imam-fadhkur/" class="text-light"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i> LinkedIn</a>
-                </div>
-                <div class="col p-0">
-                  <a target="_blank" href="https://www.instagram.com/imam_fadhkur/" class="text-light"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i> Instagram</a>
-                </div>
-              </div>
-            </div>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- Page Content  -->
-      <div id="content">
-        <div style="position: relative">
-          <button type="button" id="sidebarCollapse" class="btn btn-outline-primary rounded-circle btn-sm" style="position: absolute; top: 10px; left: 10px">
-            <i class="fa fa-bars"></i>
-            <span class="sr-only">Toggle Menu</span>
-          </button>
-        </div>
-
-        <div id="home" class="border-bottom border-warning">
-          <div>
-            <img src="assets/images/header5.1.jpg" alt="header_image.png" class="img-fluid responsive-image" style="width: 100%" />
-          </div>
-          <div class="container px-lg-5 pt-sm-2 pt-lg-3">
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-                <h4 class="text-light d-flex">
-                  <span class="d-inline mt-1 mr-1">IMAM FADHKUR ROKHIM </span>
-                  <img src="assets/images/centang_biru.png" alt="" width="35px" height="auto" />
-                </h4>
-                <p>
-                  Full Stack Web and Mobile App Developer &nbsp;
-                  <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> &nbsp;
-                  <a href="assets/Imam_Fadhkur_Rokhim_-_resume.pdf" target="_blank" download="Imam_Fadhkur_Rokhim_-_resume.pdf"><i class="fa fa-file-text" aria-hidden="true"></i> <span class="text-secondary">Download Resume</span></a>
-                  <br />
-                  <i class="fa fa-map-marker" aria-hidden="true"></i> Magetan, East Java, Indonesia.
-                </p>
-                
-                <!-- background education -->
-                <span class="text-light">Background Education</span>
-                <table class="mb-3">
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true">
-                    </td>
-                    <td>
-                      </i> Informatic Engineering, Trunojoyo Madura University 
-                    </td>
-                    <td>
-                       [2018-2023]
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true">
-                    </td>
-                    <td>
-                      </i> Science, MAN 2 Magetan 
-                    </td>
-                    <td>
-                       [2015-2018]
-                    </td>
-                  </tr>
-                </table>
-
-                <!-- profession -->
-                <span class="text-light">Profession</span>
-                <table class="mb-3">
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true">
-                    </td>
-                    <td>
-                      </i> IT Support and Web Developer at STKIP PGRI Bangkalan
-                    </td>
-                    <td>
-                       [February 2022 - present]
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true">
-                    </td>
-                    <td>
-                      </i> Freelance Web and Mobile Application
-                    </td>
-                    <td>
-                       [2020 - present]
-                    </td>
-                  </tr>
-                </table>
-
-                <!-- patent -->
-                <span class="text-light">Patent</span>
-                <table class="mb-3">
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      Sistem Antrian Terapi (SMART) Rumah Sakit - <span class="text-light">Program Komputer</span>
-                    </td>
-                    <td>
-                        <a target="_blank" style="font-size: 15px;" href="https://e-hakcipta.dgip.go.id/index.php/c?code=OGFkYjljOGVmZDA4ZGI1MDZmNzk4MGQxMGI1NmNmYzYK"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      Aplikasi Sistem Rekomendasi Hotel Berbasis Multi-Kriteria Dengan Menerapkan Teknik Normalisasi Dalam Pendekatan Collaborative Filtering - <span class="text-light">Program Komputer</span>
-                    </td>
-                    <td>
-                        <a target="_blank" style="font-size: 15px;" href="https://e-hakcipta.dgip.go.id/index.php/c?code=ZGJiYWRiZjk3MjNiMjFlOGNiZDdiOTUyOGY0MWNjOTgK"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-                    </td>
-                  </tr>
-                </table>
-
-                <div class="text-light">Knowledge</div>
-                <!-- languages -->
-                <div class="card mt-3 d-inline-flex" style="width: 12rem; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Languages</h6>
-                    <div class="card-text mt-2">
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/python.png" alt="Python"> Python</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/PHP.jpg" alt="PHP"> PHP</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/JavaScript.jpeg" alt="JavaScript"> JavaScript</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/kotlin.png" alt="Kotlin"> Kotlin</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/HTML5.png" alt="HTML"> HTML</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/CSS3.png" alt="CSS"> CSS</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- databases -->
-                <div class="card mt-3 d-inline-flex" style="width: 12rem; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Languages</h6>
-                    <div class="card-text mt-2">
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/MySQL.png" alt="MySQL"> MySQL</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/sqlite.svg" alt="SQLite"> SQLite</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- back-end framework -->
-                <div class="card mt-3 d-inline-flex" style="width: 12rem; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Back End Framework</h6>
-                    <div class="card-text mt-2">
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/Laravel.jpg" alt="Laravel"> Laravel</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/django.svg" alt="Django"> Django</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/CodeIgniter.png" alt="CodeIgneter"> CodeIgneter</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- front-end framework -->
-                <div class="card mt-3 d-inline-flex" style="width: 12rem; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Front End Framework</h6>
-                    <div class="card-text mt-2">
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/Bootstrap.png" alt="Bootstrap"> Bootstrap</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- software area -->
-                <div class="card mt-3 d-inline-flex" style="width: 12rem; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Software Area</h6>
-                    <div class="card-text mt-2">
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/visual-studio-code.svg" alt="VS Code"> VS Code</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/xampp.svg" alt="XAMPP"> XAMPP</div>
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/android-studio.svg" alt="Android Studio"> Android Studio</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- front-end framework -->
-                <div class="card mt-3 d-inline-flex" style="width: 12rem; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Colaborate</h6>
-                    <div class="card-text mt-2">
-                      <div><img class="rounded" width="20px" height="auto" src="assets/icons/github.svg" alt="GitHub"> GitHub</div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="experiences_certifications" class="border-bottom border-warning">
-          <div class="container px-lg-5 pt-sm-2 pt-lg-3">
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-                <h4 class="text-light">
-                  Experiences and Certifications
-                </h4>
-              </div>
-            </div>
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-                <div class="text-light">
-                  Experiences
-                </div>
-                <!-- back-end framework -->
-                <div class="card mt-3 d-inline-flex" style="width: 100%; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">More web experiences</h6>
-                    <div class="card-text mt-2">
-                      
-                <table>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      <span class="text-light">Staff KA. Lab. Komp., IT Support</span> - STKIP PGRI Bangkalan
-                    </td>
-                    <td>
-                       [Feb. 2023 - Present]
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      <span class="text-light">Freelance Web and Mobile App</span> - Freelancer
-                    </td>
-                    <td>
-                       [2020 - Present]
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      <span class="text-light">Back-End Web Developer</span> - Research Technology LPPM UTM
-                    </td>
-                    <td>
-                       [Sept. 2021 - Dec. 2021]
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      <span class="text-light">Full Stack Web Developer</span> - Informatic Engineering, UTM
-                    </td>
-                    <td>
-                       [Jul. 2021 - Oct. 2021]
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-                    </td>
-                    <td>
-                      <span class="text-light">Research Assistant</span> - PPI Garam, LPPM UTM
-                    </td>
-                    <td>
-                       [Jan. 2020 - Dec. 2020]
-                    </td>
-                  </tr>
-                </table>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col align-items-center">
-                <div class="text-light">
-                  Certifications
-                </div>
-                <!-- certifications -->
-                <div class="card mt-3 d-inline-flex" style="width: 100%; background-color: #171718">
-                  <div class="card-body" style="padding: 0% !important">
-                    <h6 class="card-subtitle text-muted">Both are equal</h6>
-                    <div class="card-text mt-2">
-
-<table>
-  <tr>
-    <td>
-      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-    </td>
-    <td>
-      Cloud Practitioner Essentials (Belajar Dasar AWS Cloud) - <span class="text-light">DICODING</span>
-    </td>
-    <td>
-        <a target="_blank" style="font-size: 15px;" href="https://www.dicoding.com/certificates/MRZM42EVRXYQ"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-    </td>
-    <td>
-      Kursus JavaScript - <span class="text-light">PROGATE</span>
-    </td>
-    <td>
-        <a target="_blank" style="font-size: 15px;" href="https://progate.com/course_certificate/44685eb3r9kc4u"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-    </td>
-    <td>
-      Kursus HTML & CSS - <span class="text-light">PROGATE</span>
-    </td>
-    <td>
-        <a target="_blank" style="font-size: 15px;" href="https://progate.com/course_certificate/61de4488r8n581"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-    </td>
-    <td>
-      Memulai Pemrograman Dengan Kotlin - <span class="text-light">DICODING</span>
-    </td>
-    <td>
-        <a target="_blank" style="font-size: 15px;" href="https://www.dicoding.com/certificates/RVZK4YM7EPD5"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-    </td>
-    <td>
-      Belajar Membuat Aplikasi Android untuk Pemula - <span class="text-light">DICODING</span>
-    </td>
-    <td>
-        <a target="_blank" style="font-size: 15px;" href="https://www.dicoding.com/certificates/72ZD2NO5JZYW"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <i class="fa fa-circle" style="font-size: 0.6em" aria-hidden="true"></i> 
-    </td>
-    <td>
-      Belajar Prinsip Pemrograman SOLID - <span class="text-light">DICODING</span>
-    </td>
-    <td>
-        <a target="_blank" style="font-size: 15px;" href="https://www.dicoding.com/certificates/MRZMGWN1NZYQ"><i class="fa fa-external-link" aria-hidden="true"></i></a>
-    </td>
-  </tr>
-</table>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="web_portfolio" class="border-bottom border-warning">
-          <div class="container px-lg-5 pt-sm-2 pt-lg-3">
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-                <h4 class="text-light">
-                  Web Portfolios
-                </h4>
-              </div>
-            </div>
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-
-                <div id="outer-slider-web" class="splide outer-slider-web">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/genetika-algorithm/admin_-_Data_User.png" alt="admin_-_Data_User"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/genetika-algorithm/guru_-_Create_new_question.png" alt="guru_-_Create_new_question" /></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/genetika-algorithm/guru_-_Hasil_Test_Pelajar.png" alt="guru_-_Hasil_Test_Pelajar" /></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/genetika-algorithm/pelajar_-_Struktur_Data.png" alt="pelajar_-_Struktur_Data" /></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">E-Learning Genetic Algorithm</h5>
-                            <p class="text-secondary pb-4">This website is a Web Electronic Learning with the implementation of a Genetic Algorithm. The role of this Genetic Algorithm is to filter the best study path for student based on these algorithm.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/invent-wisata-bkl/admin_-_Dashboard_admin.png" alt="admin_-_Dashboard_admin.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/invent-wisata-bkl/admin_-_Profil.png" alt="admin_-_Profil.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/invent-wisata-bkl/op1_-_Data_wisata.png" alt="op1_-_Data_wisata.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/invent-wisata-bkl/pg1_-_Dashboard_pengelola.png" alt="pg1_-_Dashboard_pengelola.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Inventarisasi Pariwisata Bangkalan</h5>
-                            <p class="text-secondary pb-4">Inventarisasi Pariwisata Bangkalan or Bangkalan Tourism Inventory is a website with one purpose, which is for inventory management of items at a tourist destination.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/pmb-stkip-pgri-bkl/admin_-_informasi_daftar_ulang.png" alt="admin_-_informasi_daftar_ulang.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/pmb-stkip-pgri-bkl/admin_-_register.png" alt="admin_-_register.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/pmb-stkip-pgri-bkl/jalur_masuk.png" alt="jalur_masuk.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/pmb-stkip-pgri-bkl/jalur_masukRegistrasi_Utama.png" alt="jalur_masukRegistrasi_Utama.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/pmb-stkip-pgri-bkl/Pendaftaran_-_jalur_pendaftaran.png" alt="Pendaftaran_-_jalur_pendaftaran.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Penerimaan Mahasiswa Baru - STKIP PGRI Bangkalan</h5>
-                            <p class="text-secondary pb-4">This website is used to manage the new student which wants to or just after register to STKIP PGRI Bangkalan.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/social-media/Home_john.png" alt="Home_john.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/social-media/Profile_henry.png" alt="Profile_henry.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/social-media/Sign_In.png" alt="Sign_In.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Social Media</h5>
-                            <p class="text-secondary pb-4">Build with Python (Django) make this simple social media website load faster than other general websites.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/adi-kursa/ARTIKEL_TERBARU.png" alt="ARTIKEL_TERBARU.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/adi-kursa/create_post.png" alt="create_post.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/adi-kursa/Dashboard.png" alt="Dashboard.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/adi-kursa/Home.png" alt="Home.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/adi-kursa/Post_Categories.png" alt="Post_Categories.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/adi-kursa/Semua_Postingan_di_project.png" alt="Semua_Postingan_di_project.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Personal Blog</h5>
-                            <p class="text-secondary pb-4">Simple website for writing an article. This website can provide full feature articles like add fews image, links to others, etc.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/counseling-chat/home_-_admin_chat.png" alt="home_-_admin_chat.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/counseling-chat/data_-_guru.png" alt="data_-_guru.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/counseling-chat/home_-_admin.png" alt="home_-_admin.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/counseling-chat/login.png" alt="login.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">High School Counseling Chat Platform</h5>
-                            <p class="text-secondary pb-4">This website is to provide chat features for BK students and teachers. And also to manage all the problems that have been experienced by students to be used as material for future school evaluations.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/siprakerin/Dashboard.png" alt="Dashboard.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/siprakerin/Dashboard_-_isi_loogbook.png" alt="Dashboard_-_isi_loogbook.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">SIPRAKERIN</h5>
-                            <p class="text-secondary pb-4">SIPRAKERIN (Sistem Praktik Kerja Industri) is a website for schools to manage their student who is wanna get into internship.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/spk-profile-matching/index_profile_matching.png" alt="index_profile_matching.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/spk-profile-matching/perhitungan-1.png" alt="perhitungan-1.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/spk-profile-matching/perhitungan-2.png" alt="perhitungan-2.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/spk-profile-matching/Ubah_Nilai_Profileprofile_matching.png" alt="Ubah_Nilai_Profileprofile_matching.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">DSS Website with Profile Matching Method</h5>
-                            <p class="text-secondary pb-4">The DSS (Decision Support System) I've developed above is a website for schools that uses the Profile Matching Method to filter students and place them in the most suitable majors based on their profiles.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-web splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/smart/Home_--_SMART.png" alt="Home_--_SMART.png"/></li>
-                              <li class="splide__slide"><img class="img-fluid" src="assets/web_portfolio/smart/testimoni_--_SMART.png" alt="testimoni_--_SMART.png"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Hospital Therapy Queue System</h5>
-                            <p class="text-secondary pb-4">Optimize hospital therapy appointments with our user-friendly web app, reducing wait times and enhancing patient experience.</p>
-                          </div>
-                        </div>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="mobile_portfolio" class="border-bottom border-warning">
-          <div class="container px-lg-5 pt-sm-2 pt-lg-3">
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-                <h4 class="text-light">
-                  Mobile Portfolios
-                </h4>
-              </div>
-            </div>
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-
-                <div id="outer-slider-mobile" class="splide outer-slider-mobile">
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="inner-slider-mobile splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide text-center"><img class="img-fluid" style="max-height: 300px;" src="assets/mobile_portfolio/animals.gif" alt="animals.gif"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Animals</h5>
-                            <p class="text-secondary pb-4">Engaging app offers an interactive journey, introducing diverse global animals while providing in-depth information and captivating visuals.</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="inner-slider-mobile splide my-4">
-                          <div class="splide__track">
-                            <ul class="splide__list">
-                              <li class="splide__slide text-center"><img class="img-fluid" style="max-height: 300px;" src="assets/mobile_portfolio/space.gif" alt="space.gif"/></li>
-                            </ul>
-                          </div>
-                          <div class="text-content my-2">
-                            <h5 class="text-light">Space</h5>
-                            <p class="text-secondary pb-4">Explore our solar system's planets with detailed information in this educational app. Discover the wonders of space.</p>
-                          </div>
-                        </div>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="short_story" class="border-bottom border-warning">
-          <div class="container px-lg-5 pt-sm-2 pt-lg-3">
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col align-items-center">
-                <p class="text-light">I hope you enjoy reading my <span style="font-size: larger;">SHORT STORY LIFE :)</span></p>
-                <p>
-                  &emsp;&emsp;Hello, my name is imam (if you wanna know again). I was born in poor family, poor mindset, poor economy, also poor education. 
-                  In my young age (about age 10) until now I always spend my time for pray (approaching God, because it's so peaceful than approaching a woman) and STUDY.
-                  The study I mean is just like general study, like do homework, read some school book, learn new knowledge for my tomorrow school, etc.
-                </p>
-                <p>
-                  &emsp;&emsp;That habit I always do until now, because I can't stop, I can't idle, 
-                  but if I got tired or bored I just watch a movie or going somewhere where it's energetic nature. 
-                  Like hill or mountain, beach, village, or just going randomly onto the street to distract my mind.
-                  Not just study, as I said before, I always spend my time praying too. 
-                  I don't know if I am going to the Mosque in subh (dawn, dawn prayer), in that day I feel fully energic, fully smiling, 
-                  and so peaceful until the night I am going to sleep.
-                </p>
-                <p>
-                  &emsp;&emsp;In my religion, this world is a small things, just get your attention of god with pure heart, with what the God said, 
-                  and the world will come to you. IT'S AMAZING... TRULY AMAZING, it's true, that's word. 
-                  I always get educational scholarships since child until now, and securing my job was smooth and comfortable.
-                  Like, all is going easy, because Allah is in my heart.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="footer" class="my-5">
-          <div class="container px-lg-5 pt-sm-2 pt-lg-3">
-            <div class="row mx-md-4 mt-md-1">
-              <div class="col-md-10 align-items-center">
-                Copyright &copy; <span id="current-year"></span> <span class="text-dark bg-light">&nbsp; Imam Fadhkur Rokhim &nbsp;<span class="typing-effect"></span> &nbsp;</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+  <body>
+    <div class="fixed-container">
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+      </div>
+      <div class="row-hexagon">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
       </div>
     </div>
-  
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.1/dist/js/splide.min.js"></script>
-    <script>
+    <center>
+      <div class="content-container">
+        <h1>IMAM FADHKUR ROKHIM</h1>
+        <div class="card bg-dark border border-light text-light text-center d-inline-flex m-md-2 m-lg-3">
+          <div class="card-body">
+            <p class="card-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                <path
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"
+                />
+              </svg>
+            </p>
+            <p>website</p>
+            <a href="web/index.html" class="btn btn-outline-light">selengkapnya</a>
+          </div>
+        </div>
+        <!-- <div class="card bg-dark border border-light text-light text-center d-inline-flex m-md-2 m-lg-3">
+          <div class="card-body">
+            <p class="card-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                <path
+                  d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"
+                />
+              </svg>
+            </p>
+            <p>test</p>
+            <a href="test/index.html" class="btn btn-outline-light">selengkapnya</a>
+          </div>
+        </div> -->
+        <div class="card bg-dark border border-light text-light text-center d-inline-flex m-md-2 m-lg-3">
+          <div class="card-body">
+            <p class="card-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+                <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+              </svg>
+            </p>
+            <p>resume</p>
+            <a href="portfolio.html" class="btn btn-outline-light">selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </center>
 
-      // splidejs for web
-      document.addEventListener("DOMContentLoaded", function () {
-        new Splide(".outer-slider-web", {
-            type: "slide", // Menggunakan "slide" alih-alih "loop"
-            rewind: false, // Mengatur agar slide tidak kembali ke awal setelah mencapai akhir
-            perPage: 1,
-            perMove: 1,
-          }).mount();
-
-        var innerSlides = document.querySelectorAll(".inner-slider-web");
-        innerSlides.forEach(function (innerSlide) {
-          new Splide(innerSlide, {
-            type: "slide", // Menggunakan "slide" alih-alih "loop"
-            rewind: false, // Mengatur agar slide tidak kembali ke awal setelah mencapai akhir
-            perPage: 1,
-            perMove: 1,
-            drag: false,
-          }).mount();
-        });
-      });
-
-      // splidejs for mobile
-      document.addEventListener("DOMContentLoaded", function () {
-        new Splide(".outer-slider-mobile", {
-          type: "slide", // Menggunakan "slide" alih-alih "loop"
-          rewind: false, // Mengatur agar slide tidak kembali ke awal setelah mencapai akhir
-          perPage: 1,
-          perMove: 1,
-        }).mount();
-
-        var innerSlides = document.querySelectorAll(".inner-slider-mobile");
-        innerSlides.forEach(function (innerSlide) {
-          new Splide(innerSlide, {
-            type: "slide", // Menggunakan "slide" alih-alih "loop"
-            rewind: false, // Mengatur agar slide tidak kembali ke awal setelah mencapai akhir
-            perPage: 1,
-            perMove: 1,
-            drag: false,
-          }).mount();
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var currentYear = new Date().getFullYear();
-        document.getElementById("current-year").textContent = currentYear;
-      });
-
-    </script>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
