@@ -60,5 +60,11 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://imamfadhkur.github.io/web/puisi/masehi-dan-kiamat.html</loc>
+        <lastmod>2024-1-1</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- Tambahkan URL lainnya -->
 </urlset>
