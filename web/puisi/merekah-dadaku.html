@@ -218,7 +218,15 @@
     </main>
 
     <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-      &COPY;imam fadhkur rokhim <br />
+      <b>imam fadhkur rokhim</b><br />
+      <p>copyright 2023-<span id="currentYear"></span> all rights reserved.</p>
+      <script>
+        // Mendapatkan tahun saat ini menggunakan JavaScript
+        var currentYear = new Date().getFullYear();
+
+        // Menampilkan tahun di elemen dengan id "currentYear"
+        document.getElementById("currentYear").innerHTML = currentYear;
+      </script>
       &emsp;<a href="../index.html">Website</a> &nbsp;&nbsp;<a href="../../portfolio/index.html">Resume</a> &nbsp;&nbsp; <a href="https://github.com/imamfadhkur">GitHub</a> &nbsp;&nbsp;
       <a href="https://www.instagram.com/imam_fadhkur/">Instagram</a> &nbsp;&nbsp; <br /><br />
       <a href="#">Back to top</a>
