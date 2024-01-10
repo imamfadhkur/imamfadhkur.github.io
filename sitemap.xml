@@ -66,5 +66,23 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://imamfadhkur.github.io/web/puisi/dirinya-kelelahan.html</loc>
+        <lastmod>2024-1-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://imamfadhkur.github.io/web/puisi/keinginan-untuk-jatuh-kedalam-lautan-asmara.html</loc>
+        <lastmod>2024-1-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://imamfadhkur.github.io/web/puisi/yang-maha-cinta-merindukannya.html</loc>
+        <lastmod>2024-1-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <!-- Tambahkan URL lainnya -->
 </urlset>
