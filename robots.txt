@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /test/
-Disallow: /web/
-Allow: /assets/
-Allow: /portfolio/
