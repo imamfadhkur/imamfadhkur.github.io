@@ -1,0 +1,13 @@
+<header class="site-header2nd" role="banner">
+  <div class="wrapper">
+    {%- if page_paths -%}
+    <nav class="site-nav2nd">
+      <div class="trigger">
+        {%- assign blog_pages = site.pages | where: "layout", "blog" | sort: "date" -%} {%- for page in blog_pages -%}
+        <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+        {%- endfor -%}
+      </div>
+    </nav>
+    {%- endif -%}
+  </div>
+</header>
