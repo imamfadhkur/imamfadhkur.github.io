@@ -3,12 +3,14 @@ layout: default
 ---
 
 <div class="container">
-  <header class="header">
-    {%- assign oldest_post = site.posts | reverse | first -%}
-    <h1>{{ oldest_post.title }}</h1>
-    <p>{{ oldest_post.content | truncatewords: 50, "..." }}</p>
-    <a href="{{ oldest_post.url }}" class="continue-reading">read more</a>
-  </header>
+  {%- if site.posts.size > 0 -%}
+    <header class="header">
+      {%- assign oldest_post = site.posts | reverse | first -%}
+      <h1>{{ oldest_post.title }}</h1>
+      <p>{{ oldest_post.content | truncatewords: 50, "..." }}</p>
+      <a href="{{ oldest_post.url }}" class="continue-reading">read more</a>
+    </header>
+  {%- endif -%}
   <section class="featured-posts" id="featured-posts">
   </section>
   <section>
