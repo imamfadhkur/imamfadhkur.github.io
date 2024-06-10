@@ -2,12 +2,90 @@
 layout: default
 ---
 
-<div class="home">
-
-
-  <!-- buat tampilan seperti website sebelumnya -->
-
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+<div class="container">
+  <header class="header">
+    {%- assign oldest_post = site.posts | reverse | first -%}
+    <h1>{{ oldest_post.title }}</h1>
+    <p>{{ oldest_post.content | truncatewords: 50, "..." }}</p>
+    <a href="{{ oldest_post.url }}" class="continue-reading">read more</a>
+  </header>
+  <section class="featured-posts" id="featured-posts">
+  </section>
+  <section>
+    {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in paginator.posts -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <a style="text-decoration: none;" href="/blog/{{ post.categories | last }}">{{ post.categories | last }}</a><span class="post-meta"> - {{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          <p>{{ post.content | strip_html | truncatewords: 30, "..." }}</p>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+    <div class="pagination">
+      {%- if paginator.previous_page -%}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous">Previous</a>
+      {%- endif -%}
+      {%- if paginator.next_page -%}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next">Next</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  </section>
 </div>
+
+<script>
+  var posts = [
+    {% for post in site.posts %}
+      {
+        "title": "{{ post.title | escape }}",
+        "categories": "{{ post.categories | last }}",
+        "date": "{{ post.date | date: "%Y-%m-%d" }}",
+        "url": "{{ post.url | relative_url }}"
+      },
+    {% endfor %}
+  ];
+
+  function getRandomPosts(posts, limit) {
+    var randomPosts = [];
+    for (var i = 0; i < limit; i++) {
+      var index = Math.floor(Math.random() * posts.length);
+      randomPosts.push(posts.splice(index, 1)[0]);
+    }
+    return randomPosts;
+  }
+
+  var randomPosts = getRandomPosts(posts, 3);
+  var container = document.getElementById('featured-posts');
+
+  randomPosts.forEach(function(post) {
+    var postElement = document.createElement('div');
+    postElement.className = 'post';
+
+    var titleElement = document.createElement('h4');
+    titleElement.textContent = post.title;
+    postElement.appendChild(titleElement);
+
+    var metaElement = document.createElement('p');
+    metaElement.className = 'post-meta';
+    metaElement.textContent = post.categories + ' - ' + post.date;
+    postElement.appendChild(metaElement);
+
+    var linkElement = document.createElement('a');
+    linkElement.className = 'thumbnail';
+    linkElement.href = post.url;
+    linkElement.textContent = 'read more';
+    postElement.appendChild(linkElement);
+
+    container.appendChild(postElement);
+  });
+</script>
