@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Imam Fadhkur Rokhim Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.1/dist/css/splide.min.css" />
+
+    <style>
+        :root {
+            --primary-yellow: #f1c40f;
+            --dark-bg: #121213;
+            --sidebar-bg: #1a1a1b;
+            --card-bg: #1e1e1f;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: #adb5bd;
+            overflow-x: hidden;
+        }
+
+        /* --- Sidebar Style --- */
+        #sidebar {
+            min-width: 280px;
+            max-width: 280px;
+            background: var(--sidebar-bg);
+            color: #fff;
+            transition: all 0.3s;
+            position: fixed;
+            height: 100vh;
+            z-index: 1001;
+            left: 0;
+        }
+
+        #sidebar.active { margin-left: -280px; }
+
+        #sidebar .p-4 { padding: 2rem !important; }
+
+        #sidebar ul li a {
+            padding: 10px 0;
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        #sidebar ul li a:hover { color: var(--primary-yellow); }
+
+        /* --- Content Area --- */
+        #content {
+            width: 100%;
+            padding-left: 280px; /* Lebar sidebar */
+            transition: all 0.3s;
+        }
+
+        #content.active { padding-left: 0; }
+
+        .hero-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-yellow);
+        }
+
+        /* --- UI Elements --- */
+        .text-primary-custom { color: var(--primary-yellow) !important; }
+        .btn-custom {
+            border: 1px solid var(--primary-yellow);
+            color: var(--primary-yellow);
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover { background: var(--primary-yellow); color: #000; }
+
+        .section-box {
+            padding: 40px 0;
+            border-bottom: 1px solid #2d2d2e;
+        }
+
+        /* List Data (Education/Experience) */
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #252526;
+        }
+        .data-title { color: #fff; font-weight: 500; }
+        .data-year { color: var(--primary-yellow); font-size: 0.9rem; font-weight: bold; }
+
+        /* Skill Card */
+        .skill-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: 100%;
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+        .skill-card:hover { border-color: var(--primary-yellow); transform: translateY(-5px); }
+
+        /* Typing & Cursor */
+        .typing-effect::after {
+            content: "|";
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+
+        /* Mobile Adjustments */
+        @media (max-width: 992px) {
+            #sidebar { left: -280px; }
+            #sidebar.active { left: 0; }
+            #content { padding-left: 0; }
+            #content.active { padding-left: 0; }
+            .mobile-nav-toggle { display: block !important; }
+        }
+
+        .mobile-nav-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1002;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" id="sidebarCollapse" class="btn btn-warning mobile-nav-toggle">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <h4 class="text-white mb-0">IF</h4>
+                <p class="small text-primary-custom mb-4 font-weight-bold">Software Eng. | Full Stack Dev.</p>
+                <hr style="border-top: 1px solid rgba(255,255,255,0.1)">
+                
+                <ul class="list-unstyled components mb-5">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experiences_certifications">Experience & Cert</a></li>
+                    <li><a href="#web_portfolio">Web Portfolio</a></li>
+                    <li><a href="#mobile_portfolio">Mobile Portfolio</a></li>
+                    <li><a href="#short_story">Short Story</a></li>
+                </ul>
+
+                <div class="footer-sidebar mt-5">
+                    <p class="small text-muted mb-2">CONNECT WITH ME</p>
+                    <div class="d-flex" style="gap: 15px;">
+                        <a href="https://imamfadhkur.github.io" class="text-white"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://github.com/imamfadhkur" target="_blank" class="text-white"><i class="fa fa-github fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/imam-fadhkur/" target="_blank" class="text-white"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com/imam_fadhkur/" target="_blank" class="text-white"><i class="fa fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="content">
+            <section id="home">
+                <img src="assets/images/header6.0.png" class="hero-img" alt="Header">
+                <div class="container py-5 px-4">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <h1 class="text-white font-weight-bold d-flex align-items-center flex-wrap">
+                                IMAM FADHKUR ROKHIM 
+                                <img src="assets/images/centang_biru.png" class="ml-2" width="30" alt="V">
+                            </h1>
+                            <p class="lead mb-4">Software Engineer and Full Stack Developer | <i class="fa fa-map-marker text-primary-custom"></i> Magetan, Indonesia</p>
+                            <a href="assets/Imam_Fadhkur_Rokhim_-_resume.pdf" class="btn btn-custom px-4 py-2" target="_blank">
+                                <i class="fa fa-file-text-o mr-2"></i> Download Resume
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-4">
+                            <h5 class="text-white mb-4"><i class="fa fa-graduation-cap text-primary-custom mr-2"></i> Education</h5>
+                            <div class="data-row">
+                                <span class="data-title">Informatics Engineering, ITS</span>
+                                <span class="data-year">2014-present</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-title">Informatics Engineering, UTM</span>
+                                <span class="data-year">2018-2023</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-title">Science, MAN 2 Magetan</span>
+                                <span class="data-year">2015-2018</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h5 class="text-white mb-4"><i class="fa fa-briefcase text-primary-custom mr-2"></i> Profession</h5>
+                            <div class="data-row">
+                                <span class="data-title">IT Support at STKIP PGRI BKL</span>
+                                <span class="data-year">2023-Present</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-title">Freelance Web & Mobile Apps</span>
+                                <span class="data-year">2020-Present</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-title">Web Developer at PT Edutech Prima Solution</span>
+                                <span class="data-year">2024-2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-box container">
+                <h5 class="text-white mb-4">Technical Stack</h5>
+                <div class="row">
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="skill-card">
+                            <h6 class="text-primary-custom small font-weight-bold">LANGUAGES</h6>
+                            <p class="small m-0">Python, PHP, Kotlin</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="skill-card">
+                            <h6 class="text-primary-custom small font-weight-bold">DATABASES</h6>
+                            <p class="small m-0">MySQL, SQLite</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="skill-card">
+                            <h6 class="text-primary-custom small font-weight-bold">FRAMEWORK</h6>
+                            <p class="small m-0">Laravel, Django, CI, Bootstrap</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="skill-card">
+                            <h6 class="text-primary-custom small font-weight-bold">TOOLS</h6>
+                            <p class="small m-0">VS Code, Android Studio, Git</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experiences_certifications" class="section-box container">
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <h5 class="text-white mb-4">Experiences</h5>
+                        <div class="data-row border-0">
+                            <div>
+                                <strong class="text-white d-block small">Staff KA. Lab. Komp., IT Support</strong>
+                                <span class="small text-muted">STKIP PGRI Bangkalan</span>
+                            </div>
+                            <span class="data-year">2023 - Now</span>
+                        </div>
+                        <div class="data-row border-0">
+                            <div>
+                                <strong class="text-white d-block small">PKM-AI Recipient</strong>
+                                <span class="small text-muted">Team Leader, PKM-AI Incentive Program – UTM</span>
+                            </div>
+                            <span class="data-year">2022</span>
+                        </div>
+                        <div class="data-row border-0">
+                            <div>
+                                <strong class="text-white d-block small">Lab Assistant</strong>
+                                <span class="small text-muted">Pengembangan Aplikasi Web, Informatics Eng. UTM</span>
+                            </div>
+                            <span class="data-year">2021</span>
+                        </div>
+                        <div class="data-row border-0">
+                            <div>
+                                <strong class="text-white d-block small">Research Assistant</strong>
+                                <span class="small text-muted">PPI Garam, LPPM UTM</span>
+                            </div>
+                            <span class="data-year">2020</span>
+                        </div>
+                        <div class="data-row border-0">
+                            <div>
+                                <strong class="text-white d-block small">Mentor - Web Development</strong>
+                                <span class="small text-muted">UKM Triple-C, UTM</span>
+                            </div>
+                            <span class="data-year">2019 - 2020</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <h5 class="text-white mb-4">Certifications</h5>
+
+                      <div class="data-row border-0 align-items-center">
+                          <span class="small">AWS Cloud Practitioner Essentials – Dicoding</span>
+                          <a href="https://www.dicoding.com/certificates/MRZM42EVRXYQ" target="_blank" class="text-primary-custom">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                      </div>
+
+                      <div class="data-row border-0 align-items-center">
+                          <span class="small">JavaScript Course – Progate</span>
+                          <a href="https://progate.com/course_certificate/44685eb3r9kc4u" target="_blank" class="text-primary-custom">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                      </div>
+
+                      <div class="data-row border-0 align-items-center">
+                          <span class="small">HTML & CSS Course – Progate</span>
+                          <a href="https://progate.com/course_certificate/61de4488r8n581" target="_blank" class="text-primary-custom">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                      </div>
+
+                      <div class="data-row border-0 align-items-center">
+                          <span class="small">Kotlin Programming Fundamentals – Dicoding</span>
+                          <a href="https://www.dicoding.com/certificates/RVZK4YM7EPD5" target="_blank" class="text-primary-custom">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                      </div>
+
+                      <div class="data-row border-0 align-items-center">
+                          <span class="small">Android App Development for Beginners – Dicoding</span>
+                          <a href="https://www.dicoding.com/certificates/72ZD2NO5JZYW" target="_blank" class="text-primary-custom">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                      </div>
+
+                      <div class="data-row border-0 align-items-center">
+                          <span class="small">SOLID Programming Principles – Dicoding</span>
+                          <a href="https://www.dicoding.com/certificates/MRZMGWN1NZYQ" target="_blank" class="text-primary-custom">
+                              <i class="fa fa-external-link"></i>
+                          </a>
+                      </div>
+                  </div>
+                </div>
+            </section>
+
+            <section id="web_portfolio" class="section-box container">
+                <h3 class="text-white mb-4">Web Portfolios</h3>
+                <div id="web-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+
+                          <!-- 1 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/marketplace/dashboard-marketplace.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">Self Store Marketplace</h5>
+                                          <p class="small">Information System for Sales of Goods in Electronic Stores. A system that provides management for store admins to serve customer purchases and manage goods in the store. The convenience is not only for admins, but also for customers who can make purchases online.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 2 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="/assets/web_portfolio/genetika-algorithm/admin_-_Data_User.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">E-Learning Genetic Algorithm</h5>
+                                          <p class="small">This website is a Web Electronic Learning with the implementation of a Genetic Algorithm. The role of this Genetic Algorithm is to filter the best study path for student based on these algorithm.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 3 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="/assets/web_portfolio/invent-wisata-bkl/admin_-_Dashboard_admin.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">Inventarisasi Pariwisata Bangkalan</h5>
+                                          <p class="small">Inventarisasi Pariwisata Bangkalan or Bangkalan Tourism Inventory is a website with one purpose, which is for inventory management of items at a tourist destination.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 4 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/pmb-stkip-pgri-bkl/admin_-_informasi_daftar_ulang.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">Penerimaan Mahasiswa Baru - STKIP PGRI Bangkalan</h5>
+                                          <p class="small">This website is used to manage the new student which wants to or just after register to STKIP PGRI Bangkalan.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 5 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/social-media/Home_john.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">Social Media</h5>
+                                          <p class="small">Build with Python (Django) make this simple social media website load faster than other general websites.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 6 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/adi-kursa/ARTIKEL_TERBARU.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">Personal Blog</h5>
+                                          <p class="small">Simple website for writing an article. This website can provide full feature articles like add fews image, links to others, etc.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 7 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/counseling-chat/home_-_admin_chat.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">High School Counseling Chat Platform</h5>
+                                          <p class="small">This website is to provide chat features for BK students and teachers. And also to manage all the problems that have been experienced by students to be used as material for future school evaluations.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 8 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/siprakerin/Dashboard.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">SIPRAKERIN</h5>
+                                          <p class="small">SIPRAKERIN (Sistem Praktik Kerja Industri) is a website for schools to manage their student who is wanna get into internship.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 9 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/spk-profile-matching/index_profile_matching.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">DSS Website with Profile Matching Method</h5>
+                                          <p class="small">The DSS (Decision Support System) I've developed above is a website for schools that uses the Profile Matching Method to filter students and place them in the most suitable majors based on their profiles.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <!-- 10 -->
+                          <li class="splide__slide">
+                              <div class="p-3">
+                                  <div class="card bg-dark border-secondary overflow-hidden h-100">
+                                      <img src="assets/web_portfolio/smart/Home_--_SMART.png" class="card-img-top">
+                                      <div class="card-body">
+                                          <h5 class="text-primary-custom">Hospital Therapy Queue System</h5>
+                                          <p class="small">Optimize hospital therapy appointments with our user-friendly web app, reducing wait times and enhancing patient experience.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                      </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mobile_portfolio" class="section-box container">
+                <h3 class="text-white mb-4">Mobile Portfolios</h3>
+
+                <div id="mobile-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+
+                            <!-- 1 -->
+                            <li class="splide__slide">
+                                <div class="p-3">
+                                    <div class="card bg-dark border-secondary overflow-hidden h-100 text-center">
+                                        <div class="p-3">
+                                            <img 
+                                                src="assets/mobile_portfolio/animals.gif" 
+                                                class="img-fluid" 
+                                                style="max-height: 300px;"
+                                                alt="animals.gif"
+                                            >
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="text-primary-custom">Animals</h5>
+                                            <p class="small">
+                                                Engaging app offers an interactive journey, introducing diverse global animals while providing in-depth information and captivating visuals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- 2 -->
+                            <li class="splide__slide">
+                                <div class="p-3">
+                                    <div class="card bg-dark border-secondary overflow-hidden h-100 text-center">
+                                        <div class="p-3">
+                                            <img 
+                                                src="assets/mobile_portfolio/space.gif" 
+                                                class="img-fluid" 
+                                                style="max-height: 300px;"
+                                                alt="space.gif"
+                                            >
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="text-primary-custom">Space</h5>
+                                            <p class="small">
+                                                Explore our solar system's planets with detailed information in this educational app. Discover the wonders of space.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="short_story" class="section-box container">
+                <h3 class="text-white mb-4 text-center">Short Story Life</h3>
+                <div class="bg-dark p-4 p-md-5 rounded border border-secondary">
+                    <p class="font-italic">"I was born in a simple family... my life is spent between study and prayer."</p>
+                    <p class="small text-white-50">Hello, my name is Imam. In my religion, this world is a small thing, just get your attention of God with pure heart, and the world will come to you...</p>
+                </div>
+            </section>
+
+            <footer class="p-5 text-center">
+                <p class="small">Copyright &copy; <span id="current-year"></span> | <span class="text-white font-weight-bold">Imam Fadhkur Rokhim <span class="typing-effect"></span></span></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.1/dist/js/splide.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Sidebar Toggle
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+            });
+
+            // Splide Slider
+            if($('.splide').length) {
+                new Splide("#web-slider", {
+                    type: "loop",
+                    perPage: 1,
+                    gap: '1rem',
+                    breakpoints: {
+                        768: { perPage: 1 }
+                    }
+                }).mount();
+            }
+
+            // Year
+            $('#current-year').text(new Date().getFullYear());
+
+            // Typing
+            const textArray = [
+              "Developer", 
+              "Problem Solver", 
+              "Logical", 
+              "Persistent", 
+              "Lifelong Learner"
+            ];
+            let part = 0, partIndex = 0, intervalVal;
+            function type() {
+                let text = textArray[part].substring(0, partIndex + 1);
+                $('.typing-effect').html(text);
+                partIndex++;
+                if (text === textArray[part]) {
+                    clearInterval(intervalVal);
+                    setTimeout(() => { intervalVal = setInterval(backspace, 50); }, 1000);
+                }
+            }
+            function backspace() {
+                let text = textArray[part].substring(0, partIndex - 1);
+                $('.typing-effect').html(text);
+                partIndex--;
+                if (text === '') {
+                    clearInterval(intervalVal);
+                    part = (part + 1) % textArray.length;
+                    partIndex = 0;
+                    intervalVal = setInterval(type, 100);
+                }
+            }
+            intervalVal = setInterval(type, 100);
+        });
+    </script>
+</body>
+</html>

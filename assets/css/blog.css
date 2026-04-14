@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.continue-reading {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.featured-posts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.post {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 48%;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.post:not(:last-child) {
+  margin-right: 2%; /* Adjust this value as needed */
+}
+
+.thumbnail {
+  background-color: #6c757d;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.thumbnail:visited {
+  color: #ffffff; /* Ensures the text remains white after the link is visited */
+}
+
+.thumbnail:hover, .thumbnail:active {
+  color: #ffffff; /* Ensures the text remains white when the link is hovered or active */
+}
